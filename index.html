@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+
+
+</head>
+<body>
+	<div class="navbar">
+	    <div class="navbar-inner">
+		    <div class="container">
+			    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+			    </a>
+			    <a class="brand" href="#">CTA Status</a>
+			    <div class="nav-collapse collapse">
+			        <form class="navbar-form">
+			        	<div class="btn-group" data-toggle="buttons-radio">
+							<ul class="nav">
+								<li><button Value="Red" class="btn" name="Route" onclick="return getStatus(this.value)">Red</button></li>
+								<li><button Value="Blue" class="btn" name="Route" onclick="return getStatus(this.value)">Blue</button></li>
+							 	<li><button Value="Brn" class="btn" name="Route" onclick="return getStatus(this.value)">Brown</button></li>
+							 	<li><button Value="G" class="btn" name="Route" onclick="return getStatus(this.value)">Green</button></li>
+							 	<li><button Value="Org" class="btn" name="Route" onclick="return getStatus(this.value)">Orange</button></li>
+							 	<li><button Value="P" class="btn" name="Route" onclick="return getStatus(this.value)">Purple</button></li>
+							 	<li><button Value="Pexp" class="btn" name="Route" onclick="return getStatus(this.value)">Purple Express</button></li>
+							 	<li><button Value="Pink" class="btn" name="Route" onclick="return getStatus(this.value)">Pink</button></li>
+							 	<li><button Value="Y" class="btn" name="Route" onclick="return getStatus(this.value)">Yellow</button></li>
+							</ul>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span5">
+				<div id="status">
+				</div>
+			</div>
+		</div>
+	</div>	
+
+</body>
+</html>
