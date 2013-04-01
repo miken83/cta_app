@@ -5,6 +5,7 @@ function getStatus(route) {
 	test.open("GET", url, false);
 	test.send();
 	xmldoc = test.responseXML;
-	document.getElementById("status").innerHTML="<h3>Current Status</h3>" + xmldoc.getElementsByTagName("RouteStatus")[0].childNodes['0'].textContent;
+	// document.getElementById("status").innerHTML="<h3>Current Status</h3>" + xmldoc.getElementsByTagName("RouteStatus")[0].childNodes['0'].textContent; 
+	document.write(xmldoc.getElementsByTagName("RouteStatus")[0].childNodes['0'].textContent);
 	return false;
 }
