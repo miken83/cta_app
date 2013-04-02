@@ -2903,6 +2903,8 @@ table th[class*="span"],
 }
 
 .dropdown-menu {
+  max-height: 350px;
+  overflow-y: auto;
   position: absolute;
   top: 100%;
   left: 0;
