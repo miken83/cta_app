@@ -35,7 +35,45 @@
 		Take note this file exactly needs to be 320x460 for iPhone or 1004x768 for iPad, and is a PNG file.
 		Also, this only works if "apple-mobile-web-app-capable" is set to "yes".
 	-->
-	<link rel="apple-touch-startup-image" href="images/startup.png" />
+	<!-- iPhone -->
+<link href="images/apple-touch-startup-image-320x460.png"
+      media="(device-width: 320px) and (device-height: 480px)
+         and (-webkit-device-pixel-ratio: 1)"
+      rel="apple-touch-startup-image">
+<!-- iPhone (Retina) -->
+<link href="images/apple-touch-startup-image-640x920.png"
+      media="(device-width: 320px) and (device-height: 480px)
+         and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image">
+<!-- iPhone 5 -->
+<link href="images/apple-touch-startup-image-640x1096.png"
+      media="(device-width: 320px) and (device-height: 568px)
+         and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image">
+<!-- iPad (portrait) -->
+<link href="images/apple-touch-startup-image-768x1004.png"
+      media="(device-width: 768px) and (device-height: 1024px)
+         and (orientation: portrait)
+         and (-webkit-device-pixel-ratio: 1)"
+      rel="apple-touch-startup-image">
+<!-- iPad (landscape) -->
+<link href="images/apple-touch-startup-image-748x1024.png"
+      media="(device-width: 768px) and (device-height: 1024px)
+         and (orientation: landscape)
+         and (-webkit-device-pixel-ratio: 1)"
+      rel="apple-touch-startup-image">
+<!-- iPad (Retina, portrait) -->
+<link href="images/apple-touch-startup-image-1536x2008.png"
+      media="(device-width: 768px) and (device-height: 1024px)
+         and (orientation: portrait)
+         and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image">
+<!-- iPad (Retina, landscape) -->
+<link href="images/apple-touch-startup-image-1496x2048.png"
+      media="(device-width: 768px) and (device-height: 1024px)
+         and (orientation: landscape)
+         and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image">
 	
 	<!--
 		Prevent the user from elastic scrolling / rubber banding. Sadly, doesn't always work properly.
