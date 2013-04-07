@@ -1,11 +1,24 @@
-//gets value from button press and returns the cta alert status using the cta customer alerts API
-function getStatus(route) {
-	var url= "http://www.transitchicago.com/api/1.0/routes.aspx?routeid=" + route;
-	var test = new XMLHttpRequest();
-	test.open("GET", url, false);
-	test.send();
-	xmldoc = test.responseXML;
-	// document.getElementById("status").innerHTML="<h3>Current Status</h3>" + xmldoc.getElementsByTagName("RouteStatus")[0].childNodes['0'].textContent; 
-	document.write(xmldoc.getElementsByTagName("RouteStatus")[0].childNodes['0'].textContent);
-	return false;
-}
+function getAlertStatus(){
+	var $routeId;
+	var $baseUrl = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D%22http%3A%2F%2Fwww.transitchicago.com%2Fapi%2F1.0%2Froutes.aspx%3Frouteid%3D";
+	var $URL;
+	$('.route').click(function(){
+		$('.route').removeClass("active");
+		$(".collapse").collapse('toggle');
+		$routeId = $(this).data("value");
+		$(this).toggleClass("active");
+		var $URL = $baseUrl + $routeId + "%22&format=json&diagnostics=true";
+		$.getJSON($URL, function (data) {
+			$(".status").html("<div class='status' id=" + $routeId + "><h1>" + data.query.results.CTARoutes.RouteInfo.Route + "</h1><h3>" + data.query.results.CTARoutes.RouteInfo.RouteStatus + "</h3></div>");
+		});
+	});
+	$('.bus').click(function(){
+		$('.route').removeClass("active");
+		$(".collapse").collapse('toggle');		
+		$routeId = $(this).data("value");
+		var $URL = $baseUrl + $routeId + "%22&format=json&diagnostics=true";
+		$.getJSON($URL, function (data) {
+			$(".status").html("<div class='status'><h1>" + data.query.results.CTARoutes.RouteInfo.Route + "</h1><h3>" + data.query.results.CTARoutes.RouteInfo.RouteStatus + "</h3></div>");
+		});
+	});
+};

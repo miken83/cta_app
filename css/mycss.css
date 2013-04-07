@@ -1,8 +1,40 @@
 body { 
-  background-image:url("../images/wood_02.jpg"); 
+	background-image: url("../images/grey_background.png");
 }
 
 .status{
 	text-align: center;
 	padding-top: 3%;
+}
+.dropdown-menu{
+  max-height: 357px;
+  overflow-y: auto;
+}
+
+#red {
+	color: #c60c30;
+}
+#blue {
+	color: #00a1de;
+}
+#brn {
+	color: #62361b;
+}
+#g {
+	color: #009b3a;
+}
+#org {
+	color: #f9461c;
+}
+#p {
+	color: #522398;
+}
+#pexp {
+	color: #522398;
+}
+#pink {
+	color: #e27ea6;
+}
+#y {
+	color: #f9e300;
 }
