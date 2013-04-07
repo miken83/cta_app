@@ -1,10 +1,17 @@
 body { 
 	background-image: url("../images/grey_background.png");
 }
-
+.wrapper{
+	width: 960px;
+  margin: 0 auto;
+}
 .status{
 	text-align: center;
 	padding-top: 3%;
+	font-size: 3em;
+}
+.message{
+	text-align: center;
 }
 .dropdown-menu{
   max-height: 357px;
