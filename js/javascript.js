@@ -48,8 +48,8 @@ function getAlertStatus(){
 		var $URL = $baseUrl + $routeId + "%22&format=json&diagnostics=true";
 		var $URL2 = $baseUrl2 + $routeId + "%22&format=json&diagnostics=true";
 		$.getJSON($URL, function (data) {
-			$(".status").append("<style> .status{color: #" + data.query.results.CTARoutes.RouteInfo.RouteColorCode + "}</style><div class='status'><h1>" + data.query.results.CTARoutes.RouteInfo.
-				ServiceId + " " + data.query.results.CTARoutes.RouteInfo.Route + "</h1><h3>" + data.query.results.CTARoutes.RouteInfo.RouteStatus + "</h3></div>");
+			$(".status").append("<style> .status{color: #" + data.query.results.CTARoutes.RouteInfo.RouteColorCode + "}</style><div class='status'>" + data.query.results.CTARoutes.RouteInfo.
+				ServiceId + " " + data.query.results.CTARoutes.RouteInfo.Route + "<h3>" + data.query.results.CTARoutes.RouteInfo.RouteStatus + "</h3></div>");
 		});
 		$.getJSON($URL2, function (data2) {
 			var $error = data2.query.results.CTAAlerts.ErrorCode;

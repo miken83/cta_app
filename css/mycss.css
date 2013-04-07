@@ -1,14 +1,36 @@
+@font-face {
+    font-family: 'NegotiateFree';
+    src: url('../fonts/negotiate_free-webfont.eot');
+    src: url('../fonts/negotiate_free-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/negotiate_free-webfont.woff') format('woff'),
+         url('../fonts/negotiate_free-webfont.ttf') format('truetype'),
+         url('../fonts/negotiate_free-webfont.svg#NegotiateFree') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 body { 
 	background-image: url("../images/grey_background.png");
 }
 .wrapper{
 	width: 960px;
   margin: 0 auto;
+  font-family: NegotiateFree;
 }
 .status{
+	font-family: NegotiateFree;
+	font-weight: bold;
 	text-align: center;
 	padding-top: 3%;
-	font-size: 3em;
+	font-size: 2.2em;
+	line-height: 1em
+	
+}
+.status-message{
+	font-weight: normal;
+	color: #000;
 }
 .message{
 	text-align: center;
